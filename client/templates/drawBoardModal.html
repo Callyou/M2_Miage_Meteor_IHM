@@ -1,0 +1,12 @@
+<ion-modal-view ng-controller="DrawBoardCtrl as drawboard">
+  <ion-header-bar>
+    <h1 class="title">Draw what you want</h1>
+    <div class="buttons">
+      <button class="button button-clear button-positive" ng-click="drawboard.hideDrawBoardModal()">Cancel</button>
+    </div>
+  </ion-header-bar>
+
+  <ion-content>
+    <canvas draw id="canvas"></canvas>
+  </ion-content>
+</ion-modal-view>

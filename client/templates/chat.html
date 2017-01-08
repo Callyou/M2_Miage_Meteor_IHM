@@ -17,8 +17,15 @@
       </div>
     </div>
   </ion-content>
-  <ion-footer-bar keyboard-attach class="bar-stable footer-chat item-input-inset">
+  <ion-footer-bar keyboard-attach  ng-class="{expandFooter: hover}" class="bar-stable footer-chat item-input-inset">
     <button class="button button-clear button-icon button-positive icon ion-ios-upload-outline"></button>
+
+    <div  ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+      <canvas draw width="220" height="130" id="canvas"></canvas>
+      <button ng-click="chat.sendDraw()"  class="button button-clear button-icon button-positive icon ion-paper-airplane"></button>
+      <button ng-click="chat.cleanCanvas()"  class="button button-clear button-icon button-positive icon ion-wand"></button>
+      <button ng-click="chat.drawOnSelfie()"  class="button button-clear button-icon button-positive icon ion-camera"></button>
+    </div>
 
     <label class="item-input-wrapper">
       <input ng-model="chat.message"
@@ -32,10 +39,10 @@
     <span ng-if="chat.message.length > 0">
       <button ng-click="chat.sendMessage()" class="button button-clear button-positive">Send</button>
     </span>
+
     <span ng-if="!chat.message || chat.message.length === 0">
       <button ng-click="chat.sendPicture()" class="button button-clear button-icon button-positive icon ion-ios-camera-outline"></button>
       <i class="buttons-seperator icon ion-android-more-vertical"></i>
-      <button class="button button-clear button-icon button-positive icon ion-ios-mic-outline"></button>
     </span>
   </ion-footer-bar>
 </ion-view>

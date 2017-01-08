@@ -95,7 +95,16 @@
   }
 }
 
+.expandFooter {
+  height: auto;
+}
+
 .footer-chat {
+
+  canvas{
+    border: solid;
+  }
+  
   .item-input-wrapper {
     background-color: #FFF;
   }
