@@ -24,8 +24,7 @@ import CalendarFilter from '../filters/calendar.filter';
 import ChatNameFilter from '../filters/chat-name.filter';
 import ChatPictureFilter from '../filters/chat-picture.filter';
 import NewChatService from '../services/new-chat.service';
-import DrawBoardCtrl from '../controllers/drawboard.controller'; //ordre dans lequel sont appellees
-import DrawBoardService from '../services/drawboard.service'; //ordre dans lequel sont appellees
+
 import Routes from '../routes';
 
 const App = 'Whatsapp';
@@ -39,8 +38,6 @@ Angular.module(App, [
 ]);
 
 new Loader(App)
-  .load(DrawBoardService) //dit de charger dans angular
-  .load(DrawBoardCtrl) //dit de charger dans angular
   .load(DrawDirective) //dit de charger dans angular
   .load(ChatsCtrl)
   .load(ChatCtrl)
