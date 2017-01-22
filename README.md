@@ -1,5 +1,5 @@
 [{]: <region> (header)
-# WhatsApp Clone with Ionic & Meteor CLI
+# WhatsApp Clone with Ionic & Meteor CLI for M2 MIAGE
 [}]: #
 [{]: <region> (body)
 # WhatsApp Clone with Meteor CLI and Ionic
